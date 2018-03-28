@@ -1,13 +1,5 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.*;
-public class Reading{
-	List<String> doc = new ArrayList<String>();
-	Hashtable<String, Integer> ham = new Hashtable<String, Integer>();
-	Hashtable<String, Integer> spam = new Hashtable<String, Integer>();
-
-	public List<String> Read(String name)throws IOException{
+public class Classifier{
+	public void Read(String name)throws IOException{
 		BufferedReader br = new BufferedReader(new FileReader("./"+name));
 		
 		try {
@@ -28,7 +20,7 @@ public class Reading{
     					//System.out.println(ascii);
     					line = line.replace(character,((char)00));
     					//System.out.println(line);
-    					doc.add(line);
+    					
     				}else{
     					//System.out.println(ascii+" - "+character);
     				}
@@ -37,57 +29,18 @@ public class Reading{
 
     			}
     			String[] typ = line.split("\t");
-    			
-    			//System.out.println(typ[0]+"-"+typ[1]);
-    			String[] words = typ[1].split(" ");
-    			//System.out.println(words[0]);
-    			for(int i = 0;i<words.length;i++){
-    				String word= words[i].toLowerCase();
+    			if(typ[0].equals("ham")){
+    				this.hamMes.add(typ[1]);
+    			}else if (typ[0].equals("spam")) {
     				
-    				if(word.length() > 1 && word.charAt(0) != ((char)00)){
-
-	    				//System.out.println(word+" - "+word.length());
-	    				if(typ[0].equals("ham")){
-	    					//System.out.println(word+" - "+word.length());
-	    					if(ham.containsKey(word)){
-	    						int count = ham.get(word);
-	    						this.ham.put(word,count+1);
-	    					}else{
-	    						this.ham.put(word,1);
-	    						
-	    					}
-	    					
-	    				}else{
-	    					if(spam.containsKey(word)){
-	    						int count = spam.get(word);
-	    						this.spam.put(word,count+1);
-	    					}else{
-	    						this.spam.put(word,1);
-	    						
-	    					}
-	    				}
-	    				//System.out.println(ham.size()+"-"+spam.size());
-	    			}
+    				this.spamMes.add(typ[1]);
     			}
+				
+    			//System.out.println(hamMes);
+    			//System.out.println(typ[0]+"-"+typ[1]);
+    			
     			//System.out.println(line);
     			
     		//System.out.println(ham.size()+"-"+spam.size());
     		}
-
-    	//
-		} catch(Exception e){
-			br.close();
-			//System.out.println("holi holi");
-			//System.out.println(this.ham.size()+"-"+spam.size());
-		}
-		//System.out.println("holi holi");
-		//System.out.println(this.ham.size()+"-"+spam.size());
-		return doc;
-	}
-	public Hashtable<String,Integer> getHam(){
-		return ham;
-	}
-	public Hashtable<String,Integer> getSpam(){
-		return spam;
-	}
 }

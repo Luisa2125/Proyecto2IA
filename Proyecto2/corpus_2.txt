@@ -1,9 +1,14 @@
 
-spam	Offer is secret
-spam	Click secret link
-spam	Secret sports link
-ham	Play sports today
-ham	Went play sports
-ham	Secret sports event
-ham	Sports is today
-ham	Sports cost money
+Offer is secret
+Click secret link
+secret link
+Secret sports link
+Offer a secret link
+Click lola link
+Play sports today
+Went play sports
+Secret sports event
+Sports is today
+Sports cost money
+Sports event is today
+Play sports
