@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="showP">
+  <grid id="27dc6" binding="Proyecto" layout-manager="GridLayoutManager" row-count="6" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties>
+      <foreground color="-15107331"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="b834b" class="javax.swing.JLabel" binding="spam">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="76" height="34"/>
+            <maximum-size width="100" height="34"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font size="30"/>
+          <text value="Spam"/>
+        </properties>
+      </component>
+      <component id="f8b79" class="javax.swing.JLabel" binding="ham">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="63" height="34"/>
+            <maximum-size width="100" height="34"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font size="30"/>
+          <text value="Ham"/>
+        </properties>
+      </component>
+      <scrollpane id="bd747" binding="scrS">
+        <constraints>
+          <grid row="1" column="0" row-span="5" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="6df0e" class="javax.swing.JTextArea" binding="textS">
+            <constraints/>
+            <properties>
+              <font size="30"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <scrollpane id="43a8c" binding="scrH">
+        <constraints>
+          <grid row="1" column="2" row-span="5" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="7cd37" class="javax.swing.JTextArea" binding="textH">
+            <constraints/>
+            <properties>
+              <font size="30"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <component id="90cd9" class="javax.swing.JButton" binding="cargar">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font size="30"/>
+          <text value="clasificar"/>
+        </properties>
+      </component>
+      <component id="f87fd" class="javax.swing.JButton" binding="entrenar">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font size="30"/>
+          <text value="entrenar"/>
+        </properties>
+      </component>
+      <component id="46b01" class="javax.swing.JLabel" binding="espacio1">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="783a4" class="javax.swing.JLabel" binding="espacio2">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="31a7e" class="javax.swing.JLabel" binding="espacio3">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
